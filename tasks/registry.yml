@@ -9,3 +9,4 @@
     body_format: json
     body: "{{ lookup('template','registry.json.j2') }}"
     status_code: [200, 409]
+  loop: "{{portainer_registries}}"

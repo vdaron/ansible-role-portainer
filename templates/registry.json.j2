@@ -1,8 +1,8 @@
 {
-  "Name": "{{ registry_name }}",
-  "URL": "{{ registry_url }}:{{ registry_port }}",
-  "Authentication": {{ registry_auth | default('false')}},
-  "Type": {{ registry_type | default(3)}},
-  "Username": "{{ registry_username }}",
-  "Password": "{{ registry_password }}"
+  "Name": "{{ item.name }}",
+  "URL": "{{ item.url }}:{{ item.port }}",
+  "Authentication": {{ item.auth | default('false')}},
+  "Type": {{ item.type | default(3)}},
+  "Username": "{{ item.username }}",
+  "Password": "{{ item.password }}"
 }
